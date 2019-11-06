@@ -1,0 +1,8 @@
+image: bento/centos-7.7
+private_ip: 192.168.60.99
+
+vm_memory: 2048
+vm_cpu_cores: 2
+
+proxy_enabled: false
+proxy_cert_host: ""
