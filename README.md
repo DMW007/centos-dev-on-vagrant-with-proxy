@@ -30,3 +30,12 @@ If you made any changes to the `Vagrantfile` or the `vars.yml`, a rebuild is req
 ```bash
 vagrant destroy -f; vagrant up --provision
 ```
+
+## Proxy support
+
+Currently, the proxy support is divided in two parts:
+
+1. Add the proxy to Vagrant and the VM using plugin
+2. Registering the SSL certificate for MITM proxies
+
+For #1 you need to [install and configure the `vagrant-proxyconf` plugin](https://stackoverflow.com/a/21306809/9428314). The second use-case is handled by this project.
