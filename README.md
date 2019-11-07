@@ -20,7 +20,7 @@ The VM could be created with `vagrant up`.
 
 ## Custom provisioning
 
-Use the script [custom-provisioner.sh](./provision/custom-provisioner.sh) to apply custom commands like installing software or midifying config files. The script got executed at the end of Vagrant VM creation process. It's excluded from git to prevent checkins in this general repo.
+Use the script `provision/custom-provisioner.sh` to apply custom commands like installing software or midifying config files. The script got executed at the end of Vagrant VM creation process. It's excluded from git to prevent checkins in this general repo. When not existing, the file is ignored. You need to create it first.
 
 ## Re-build
 
