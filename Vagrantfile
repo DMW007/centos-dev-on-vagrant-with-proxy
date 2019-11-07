@@ -31,8 +31,8 @@ Vagrant.configure("2") do |config|
   config.vm.provision "shell", inline: <<-SHELL
     yum install -y git vim
 
-    yum -y install epel-release
-    yum install htop
+    yum install -y epel-release
+    yum install -y htop
   SHELL
   config.vm.provision "shell", privileged: false, inline: <<-SHELL
     git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
