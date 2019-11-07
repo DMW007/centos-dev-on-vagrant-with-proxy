@@ -16,6 +16,10 @@ Vagrant.configure("2") do |config|
   config.ssh.insert_key = false
 
   config.vm.provider "virtualbox" do |v|
+    if $cfg.include? 'vm_name' then
+      v.name = $cfg['vm_name']
+    end
+    
     v.memory = $cfg['vm_memory']
     v.cpus = $cfg['vm_cpu_cores']
   end
