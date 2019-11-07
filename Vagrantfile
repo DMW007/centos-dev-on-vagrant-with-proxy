@@ -42,6 +42,11 @@ Vagrant.configure("2") do |config|
     git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
     ~/.fzf/install --all
   SHELL
+
+  $custom_script_path = "provision/custom-provisioner.sh"
+  if File.file?($custom_script_path) then
+    config.vm.provision "shell", path: "provision/custom-provisioner.sh"
+  end
 end
 
 puts "Configuration proceeded for machine " + $cfg['private_ip']

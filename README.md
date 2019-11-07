@@ -18,6 +18,10 @@ The VM could be created with `vagrant up`.
 | `vm_memory`/ `vm_cpu_cores`        | ✓        | Specifies the memory in MB and the amount of cores. Should be adjusted, depending on how much memory the host have and the requirement of your test-setup.                                                                                                                                            |
 | `proxy_enabled`/ `proxy_cert_host` | ✓        | Only required when you're using an proxy server that uses MITM to inspect https traffic. By setting ` proxy_enabled`` to true, specify any reachable https server in your network in `proxy_cert_host`. We will fetch the root certificate from this server to insert it in CentOS system-wide store. |
 
+## Custom provisioning
+
+Use the script [custom-provisioner.sh](./provision/custom-provisioner.sh) to apply custom commands like installing software or midifying config files. The script got executed at the end of Vagrant VM creation process. It's excluded from git to prevent checkins in this general repo.
+
 ## Re-build
 
 If you made any changes to the `Vagrantfile` or the `vars.yml`, a rebuild is required. Please make sure that the (may existing) VM doesn't contain any data you need that is not stored outside the machine. Then run the following commands to delete and re-create the VM:
