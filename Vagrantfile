@@ -45,7 +45,7 @@ Vagrant.configure("2") do |config|
 
   $custom_script_path = "provision/custom-provisioner.sh"
   if File.file?($custom_script_path) then
-    config.vm.provision "shell", path: "provision/custom-provisioner.sh"
+    config.vm.provision "shell", privileged: false, path: "provision/custom-provisioner.sh"
   end
 end
 
