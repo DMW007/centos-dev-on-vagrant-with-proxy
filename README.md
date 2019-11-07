@@ -2,6 +2,11 @@
 
 Vagrantfile to setup a ready-to-go CentOS Linux VM on Vagrant using VirtualBox. Supports usage behind corporate proxys. It's designed to do some quick tests out of the box, without to spend a lot of manual work.
 
+## Included tools
+
+- git, vim, htop
+- [fzf](https://github.com/junegunn/fzf.git)
+
 ## Get started
 
 Copy the example vars file: `cp vars-example.yml vars.yml`
