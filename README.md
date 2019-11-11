@@ -29,10 +29,10 @@ Use the script `provision/custom-provisioner.sh` to apply custom commands like i
 
 ## Re-build
 
-If you made any changes to the `Vagrantfile` or the `vars.yml`, a rebuild is required. Please make sure that the (may existing) VM doesn't contain any data you need that is not stored outside the machine. Then run the following commands to delete and re-create the VM:
+If you made any changes to the `Vagrantfile` or the `vars.yml`, a rebuild is required. Run the following commands to [re-create the VM](https://stackoverflow.com/a/11162014/9428314):
 
 ```bash
-vagrant destroy -f; vagrant up --provision
+vagrant reload
 ```
 
 ## Proxy support
