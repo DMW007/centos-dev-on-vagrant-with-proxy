@@ -33,6 +33,11 @@ Vagrant.configure("2") do |config|
 
   puts "Installing tools"
   config.vm.provision "shell", inline: <<-SHELL
+    tee -a ~/.bashrc > /dev/null <<EOT
+      alias l='ls -lh'
+      alias ll='ls -lha'
+    EOT
+
     yum install -y git vim
 
     yum install -y epel-release
